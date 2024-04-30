@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://brps2mxlt6byf"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_r3b1y"]
+
+[node name="Main" type="Node"]
+
+[node name="Game" type="Node2D" parent="."]
+script = ExtResource("1_r3b1y")
+
+[node name="MarginContainer" type="MarginContainer" parent="Game"]
+offset_left = 630.0
+offset_top = 31.0
+offset_right = 4566.0
+offset_bottom = 5296.0
+scale = Vector2(0.11205, 0.11205)
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CurrentPlayer" type="Label" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "Current player: BLACK"
+
+[node name="Stage" type="Label" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 250
+text = "Stage: Laying
+Choose an empty square to lay your piece"
+autowrap_mode = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayAgain" type="Button" parent="Game/MarginContainer/VBoxContainer/CenterContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = " PLAY AGAIN "
+
+[connection signal="pressed" from="Game/MarginContainer/VBoxContainer/CenterContainer/PlayAgain" to="Game" method="_on_play_again_pressed"]

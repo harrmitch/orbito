@@ -1,0 +1,557 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfar38n0x7rfb"]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_ka58q"]
+[ext_resource type="Texture2D" uid="uid://83cokxpr7oxa" path="res://assets/square.svg" id="2_mni4e"]
+[ext_resource type="Texture2D" uid="uid://ciufvxk547nnj" path="res://assets/pointer.svg" id="3_4kh5g"]
+[ext_resource type="Texture2D" uid="uid://ddkxwaipevqqk" path="res://assets/black.svg" id="4_4ht0g"]
+[ext_resource type="Texture2D" uid="uid://do3kilodof88s" path="res://assets/white.svg" id="5_0pime"]
+[ext_resource type="Texture2D" uid="uid://dj8e6saxod7pm" path="res://assets/button.svg" id="6_dwh45"]
+[ext_resource type="Texture2D" uid="uid://dfvt2mett2fq5" path="res://assets/button-pressed.svg" id="7_qyswv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qfh6n"]
+radius = 1.02
+height = 2.96
+
+[node name="Board" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_ka58q")
+
+[node name="Row0" type="Node2D" parent="."]
+
+[node name="Square0" type="Area2D" parent="Row0"]
+position = Vector2(392, 232)
+rotation = -3.14159
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row0/Square0"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row0/Square0"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row0/Square0"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row0/Square0"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row0/Square0/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row0/Square0/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square1" type="Area2D" parent="Row0"]
+position = Vector2(852, 284)
+rotation = -1.5733
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row0/Square1"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row0/Square1"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row0/Square1"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row0/Square1"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row0/Square1/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row0/Square1/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square2" type="Area2D" parent="Row0"]
+position = Vector2(1276, 284)
+rotation = -1.56556
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row0/Square2"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row0/Square2"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row0/Square2"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row0/Square2"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row0/Square2/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row0/Square2/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square3" type="Area2D" parent="Row0"]
+position = Vector2(1700, 288)
+rotation = -1.55651
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row0/Square3"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row0/Square3"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row0/Square3"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row0/Square3"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row0/Square3/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row0/Square3/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Row1" type="Node2D" parent="."]
+
+[node name="Square0" type="Area2D" parent="Row1"]
+position = Vector2(396, 660)
+rotation = -3.13428
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row1/Square0"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row1/Square0"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1/Square0"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row1/Square0"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row1/Square0/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row1/Square0/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square1" type="Area2D" parent="Row1"]
+position = Vector2(816, 656)
+rotation = -3.14159
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row1/Square1"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row1/Square1"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1/Square1"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row1/Square1"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row1/Square1/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row1/Square1/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square2" type="Area2D" parent="Row1"]
+position = Vector2(1276, 712)
+rotation = -1.56556
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row1/Square2"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row1/Square2"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1/Square2"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row1/Square2"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row1/Square2/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row1/Square2/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square3" type="Area2D" parent="Row1"]
+position = Vector2(1648, 748)
+rotation = 0.00872665
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row1/Square3"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row1/Square3"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1/Square3"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row1/Square3"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row1/Square3/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row1/Square3/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Row2" type="Node2D" parent="."]
+
+[node name="Square0" type="Area2D" parent="Row2"]
+position = Vector2(392, 1084)
+rotation = -3.14159
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row2/Square0"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row2/Square0"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2/Square0"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row2/Square0"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row2/Square0/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row2/Square0/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square1" type="Area2D" parent="Row2"]
+position = Vector2(764, 1116)
+rotation = 1.57952
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row2/Square1"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row2/Square1"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2/Square1"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row2/Square1"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row2/Square1/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row2/Square1/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square2" type="Area2D" parent="Row2"]
+position = Vector2(1224, 1172)
+rotation = 0.00872665
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row2/Square2"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row2/Square2"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2/Square2"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row2/Square2"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row2/Square2/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row2/Square2/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square3" type="Area2D" parent="Row2"]
+position = Vector2(1648, 1172)
+rotation = 0.00872665
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row2/Square3"]
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row2/Square3"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2/Square3"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row2/Square3"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row2/Square3/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row2/Square3/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Row3" type="Node2D" parent="."]
+position = Vector2(4, 1276)
+
+[node name="Square0" type="Area2D" parent="Row3"]
+position = Vector2(336, 268)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row3/Square0"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row3/Square0"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3/Square0"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row3/Square0"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row3/Square0/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row3/Square0/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square1" type="Area2D" parent="Row3"]
+position = Vector2(760, 264)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row3/Square1"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row3/Square1"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3/Square1"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row3/Square1"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row3/Square1/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row3/Square1/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square2" type="Area2D" parent="Row3"]
+position = Vector2(1184, 268)
+rotation = 1.57952
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row3/Square2"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row3/Square2"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3/Square2"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row3/Square2"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row3/Square2/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row3/Square2/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Square3" type="Area2D" parent="Row3"]
+position = Vector2(1644, 320)
+rotation = 0.00872665
+metadata/_edit_group_ = true
+
+[node name="Square" type="Sprite2D" parent="Row3/Square3"]
+z_index = -1
+texture = ExtResource("2_mni4e")
+
+[node name="Pointer" type="Sprite2D" parent="Row3/Square3"]
+position = Vector2(25, -82)
+texture = ExtResource("3_4kh5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3/Square3"]
+position = Vector2(6, -120)
+scale = Vector2(100, 100)
+shape = SubResource("CapsuleShape2D_qfh6n")
+
+[node name="Players" type="Node2D" parent="Row3/Square3"]
+position = Vector2(7.99976, -56)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Black" type="Sprite2D" parent="Row3/Square3/Players"]
+visible = false
+texture = ExtResource("4_4ht0g")
+
+[node name="White" type="Sprite2D" parent="Row3/Square3/Players"]
+visible = false
+texture = ExtResource("5_0pime")
+
+[node name="Orbit" type="TextureButton" parent="."]
+offset_left = 880.0
+offset_top = 724.0
+offset_right = 1674.0
+offset_bottom = 1847.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("6_dwh45")
+texture_pressed = ExtResource("7_qyswv")
+
+[connection signal="input_event" from="Row0/Square0" to="." method="_on_square_input_event" binds= [Vector2(0, 0)]]
+[connection signal="input_event" from="Row0/Square1" to="." method="_on_square_input_event" binds= [Vector2(0, 1)]]
+[connection signal="input_event" from="Row0/Square2" to="." method="_on_square_input_event" binds= [Vector2(0, 2)]]
+[connection signal="input_event" from="Row0/Square3" to="." method="_on_square_input_event" binds= [Vector2(0, 3)]]
+[connection signal="input_event" from="Row1/Square0" to="." method="_on_square_input_event" binds= [Vector2(1, 0)]]
+[connection signal="input_event" from="Row1/Square1" to="." method="_on_square_input_event" binds= [Vector2(1, 1)]]
+[connection signal="input_event" from="Row1/Square2" to="." method="_on_square_input_event" binds= [Vector2(1, 2)]]
+[connection signal="input_event" from="Row1/Square3" to="." method="_on_square_input_event" binds= [Vector2(1, 3)]]
+[connection signal="input_event" from="Row2/Square0" to="." method="_on_square_input_event" binds= [Vector2(2, 0)]]
+[connection signal="input_event" from="Row2/Square1" to="." method="_on_square_input_event" binds= [Vector2(2, 1)]]
+[connection signal="input_event" from="Row2/Square2" to="." method="_on_square_input_event" binds= [Vector2(2, 2)]]
+[connection signal="input_event" from="Row2/Square3" to="." method="_on_square_input_event" binds= [Vector2(2, 3)]]
+[connection signal="input_event" from="Row3/Square0" to="." method="_on_square_input_event" binds= [Vector2(3, 0)]]
+[connection signal="input_event" from="Row3/Square1" to="." method="_on_square_input_event" binds= [Vector2(3, 1)]]
+[connection signal="input_event" from="Row3/Square2" to="." method="_on_square_input_event" binds= [Vector2(3, 2)]]
+[connection signal="input_event" from="Row3/Square3" to="." method="_on_square_input_event" binds= [Vector2(3, 3)]]
+[connection signal="pressed" from="Orbit" to="." method="_on_orbit_pressed"]
